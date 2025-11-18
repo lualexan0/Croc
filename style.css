@@ -1,0 +1,346 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ================= HEADER ================= */
+.header {
+    padding: 10px 0;
+    background: white;
+    border-bottom: 2px solid #00b2b6;
+}
+
+.container-nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #00b2b6;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    opacity: 0.7;
+}
+
+/* ================= HOME ================= */
+.fundo-img {
+    background-image: url(img/jh.png);
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.hero-content h1,
+.hero-content p {
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #00b2b6;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    opacity: 0.8;
+}
+
+/* ================= KITS (ESTILO QUADRADO) ================= */
+.kits-section {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.kits-title {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #00b2b6;
+}
+
+.kits-subtitle {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.kits-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* O Kit Card é Flex Column (Vertical) */
+.kit-card {
+    width: 200px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: .3s;
+    border-top: 4px solid #00b2b6;
+    display: flex;
+    flex-direction: column; /* Garante um embaixo do outro */
+    min-height: 380px; /* Altura mínima para alinhar */
+}
+
+.kit-card:hover {
+    transform: scale(1.05);
+}
+
+.kit-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    height: 150px; /* Altura fixa para imagem */
+    object-fit: cover;
+}
+
+.kit-card h3 {
+    margin-bottom: 10px;
+    color: #00b2b6;
+}
+
+.kit-card ul {
+    list-style: none;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.kit-card ul li {
+    margin-bottom: 4px;
+}
+
+.preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #00b2b6;
+}
+
+/* ================= LISTA DE PRODUTOS (ESTILO LISTA) ================= */
+.lista-produtos {
+    padding: 40px 20px;
+    background: #f9f9f9;
+}
+
+.lista-produtos h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #00b2b6;
+}
+
+/* O Produto Item é Flex Row (Horizontal) */
+.produto-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-left: 5px solid #00b2b6;
+    gap: 15px;
+}
+
+.produto-item img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.produto-info {
+    flex-grow: 1;   
+}
+
+.produto-info h3 {
+    color: #00b2b6;
+    margin-bottom: 5px;
+}
+
+.produto-info p {
+    color: #555;
+    font-size: 14px;
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00b2b6;
+}
+
+/* ================= NOVOS CONTROLES (BOTÕES + -) ================= */
+.controles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Ajuste específico para o card do Kit */
+.kit-card .controles {
+    margin-top: auto;
+    width: 100%;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.controles button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    background-color: #00b2b6;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.controles button:hover {
+    background-color: #008c90;
+}
+
+.quantidade {
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* ================= BARRA FLUTUANTE ================= */
+#barra-pedido {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 15px 20px;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-top: 3px solid #00b2b6;
+    transition: transform 0.3s ease-in-out;
+}
+
+.oculto {
+    transform: translateY(100%);
+}
+
+#btn-finalizar {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#btn-finalizar:hover {
+    background-color: #1ebe57;
+}
+
+#valor-total {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00b2b6;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 600px) {
+    .nav { display: none; }
+    .hero-content h1 { font-size: 22px; }
+    .fundo-img { height: 300px; }
+    
+    /* Kits no mobile */
+    .kit-card { width: 90%; }
+    
+    /* Produtos no mobile */
+    .produto-item { flex-direction: column; text-align: center; }
+
+    /* Footer no mobile */
+    .footer-container { flex-direction: column; }
+    .footer-mapa iframe { width: 100%; height: 250px; }
+    
+    /* Barra fixa no mobile */
+    #barra-pedido { flex-direction: column; gap: 10px; }
+    #btn-finalizar { width: 100%; }
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #00b2b6;
+    padding: 30px 20px;
+    color: white;
+    padding-bottom: 100px; /* Espaço para a barra não cobrir */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+.footer-links img { width: 20px; }
+.footer-links p { margin-top: 15px; font-size: 14px; }
+
+.footer-mapa iframe {
+    width: 350px;
+    height: 220px;
+    border: 0;
+    border-radius: 10px;
+}
