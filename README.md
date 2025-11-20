@@ -51,18 +51,7 @@ Atualmente, o site está em uso real pela empresa.
 
 ---
 
-## Estrutura do Projeto
 
-Croc/
-│── index.html
-│── style.css
-│── /img
-│ ├── logo.png
-│ ├── imagens dos produtos e kits
-└── README.md
-
-
----
 
 ## Deploy  
 O site está hospedado em **GitHub Pages**.  
